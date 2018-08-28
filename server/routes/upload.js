@@ -57,8 +57,9 @@ app.put('/upload/:tipo/:id', function(req, res) {
         }
         if (tipo === "usuarios") {
             imagenUsuario(id, res, nombreArchivo);
+        } else {
+            imagenProducto(id, res, nombreArchivo);
         }
-        imagenProducto(id, res, nombreArchivo);
         /* res.json({
             ok: true,
             message: 'Imagen subida correctamente'
